@@ -1,0 +1,36 @@
+# Ignore Android/IntelliJ project files
+*.iml
+.gradle/
+.idea/
+build/
+captures/
+output/
+app/build/
+gradle/wrapper/gradle-wrapper.jar
+
+# Ignore Gradle files
+.gradle/
+build/
+local.properties
+*.jar
+*.war
+*.ear
+
+# Ignore files created by Android Studio
+.idea/
+*.iws
+*.ipr
+*.iml
+out/
+*.apk
+*.ap_
+*.dex
+*.class
+*.hprof
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

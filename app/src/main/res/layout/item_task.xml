@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/taskCheckIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/check" />
+
+    <TextView
+        android:id="@+id/taskName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="21dp"
+        android:layout_toEndOf="@id/taskCheckIcon"
+        android:layout_centerVertical="true"
+        android:text="Sample Task"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="Delete"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/button_black_border"
+        android:textColor="#000000"
+        android:padding="5dp"
+        android:layout_marginStart="8dp" />
+</RelativeLayout>
+

@@ -1,0 +1,6 @@
+<!-- app/src/main/res/values/strings.xml -->
+<resources>
+    <string name="app_name">To-Do List App</string>
+    <string name="too_much_work">Too much work!</string>
+    <!-- Add other strings as needed -->
+</resources>
