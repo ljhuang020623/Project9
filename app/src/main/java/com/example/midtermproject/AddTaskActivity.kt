@@ -16,7 +16,6 @@ class AddTaskActivity : AppCompatActivity() {
     private lateinit var db: FirebaseFirestore
     private lateinit var auth: FirebaseAuth
 
-    // UI elements
     private lateinit var titleEditText: EditText
     private lateinit var descriptionEditText: EditText
     private lateinit var saveButton: Button
@@ -47,7 +46,6 @@ class AddTaskActivity : AppCompatActivity() {
         val title = titleEditText.text.toString()
         val description = descriptionEditText.text.toString()
 
-        // Create a new task
         val task = Task(
             name = title,
             description = description
@@ -57,7 +55,6 @@ class AddTaskActivity : AppCompatActivity() {
         val userId = auth.currentUser?.uid
 
         if (userId != null) {
-            // Add task to user's tasks collection
             db.collection("users")
                 .document(userId)
                 .collection("tasks")
@@ -65,18 +62,11 @@ class AddTaskActivity : AppCompatActivity() {
                 .addOnSuccessListener { documentReference ->
                     task.id = documentReference.id
                     Toast.makeText(this, "Task added.", Toast.LENGTH_SHORT).show()
-
-                    // Create an Intent to hold the result
                     val resultIntent = Intent()
                     resultIntent.putExtra("task_name", title)
                     resultIntent.putExtra("task_description", description)
-                    // Optionally, include the document ID if needed
                     resultIntent.putExtra("task_id", documentReference.id)
-
-                    // Set the result code and attach the Intent
                     setResult(RESULT_OK, resultIntent)
-
-                    // Close the activity
                     finish()
                 }
                 .addOnFailureListener { e ->
