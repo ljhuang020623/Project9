@@ -1,4 +1,4 @@
-# MidtermProject
+# Project 8
 
 For our Midterm Project we have been tasked with creating To-Do List application where the user is able to enter a limit of seven daily tasks.
 
