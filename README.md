@@ -14,10 +14,8 @@ For our Project 9 we have been tasked with creating To-Do List application where
 ## Screenshot of Application
 
 ### Home Screen and Add Task Message
-<p float="left">
-    <img src="https://github.com/user-attachments/assets/9bca7f68-cbea-4639-a477-06ec20041b53" alt="Home Screen - Add Tasks" width="45%" />
-    <img src="https://github.com/user-attachments/assets/7ea5abee-e2a9-4a9e-bafe-20a85066e03b" alt="Too Much Work - Task Limit Message" width="45%" />
-</p>
+![Image 12-2-24 at 9 38 PM](https://github.com/user-attachments/asset![Image 12-2-24 at 9 38 PM](https://github.com/user-attachments/assets/9e87c532-f08c-4c91-b049-4a78aafbe640)
+s/1f26875a-8b87-4e6d-ac28-b12715384dee)
 
 ### Task Detail View and About Developer
 <p float="left">
