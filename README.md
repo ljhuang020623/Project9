@@ -4,18 +4,19 @@ For our Project 9 we have been tasked with creating To-Do List application where
 
 ## Features
 
-- Tasks are shown in a RecyclerView without empty task slots being show
-- An add button allows the user to add a new task to their day (if there are seven, the task button is updated to display a message)
-- When a task is chosen, a new screen is displayed that allows user to mark as complete, cancel out of the screen, or switch between the next or previous task.
-- Mark as complete removes the task from the RecyclerView.
-- The application also includes an "About Activity" button to provide some information about the application and its developers.
-- When the app is closed and reopened, last saved tasks are to appear.
+- The app requires users to create an account when they use it for the first time.
+- Users must sign in every time the app becomes invisible or is no longer in the foreground.
+- The main activity includes a logout button for users to sign out manually.
+- Tasks are shown in a RecyclerView without empty task slots being shown.
+- An add button allows the user to add a new task (if a task limit is reached, the add button is updated to display a message like “Too much work!”).
+- When a task is chosen, a new screen is displayed that allows the user to mark it as complete, cancel out of the screen, or switch between the next or previous task.
+- Marking a task as complete removes it from the RecyclerView.
+- The main activity shows a search box and a search button that allow the user to filter tasks based on exactly matching a given string with task names.
 
 ## Screenshot of Application
 
 ### Home Screen and Add Task Message
-![Image 12-2-24 at 9 38 PM](https://github.com/user-attachments/asset![Image 12-2-24 at 9 38 PM](https://github.com/user-attachments/assets/9e87c532-f08c-4c91-b049-4a78aafbe640)
-s/1f26875a-8b87-4e6d-ac28-b12715384dee)
+
 
 ### Task Detail View and About Developer
 <p float="left">
