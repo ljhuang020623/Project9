@@ -1,71 +1,112 @@
+<!-- activity_main.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/appIcon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:src="@drawable/list_image" />
+    <!-- Header Section -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="36dp"
-        android:layout_alignTop="@id/appIcon"
-        android:layout_marginStart="70dp"
-        android:layout_toEndOf="@id/appIcon"
-        android:text="Listify: My To-Do List"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        <!-- App Icon -->
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/list_image"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
 
+        <!-- App Title -->
+
+        <!-- Logout Button -->
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_toEndOf="@id/appIcon"
+            android:text="Listify: My To-Do List"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:background="@drawable/button_black_border"
+            android:textColor="#000000"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:layout_below="@id/headerLayout">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:hint="Search tasks"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:text="Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_black_border"
+            android:textColor="#000000"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- RecyclerView for Tasks -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewTasks"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_below="@id/appIcon"
+        android:layout_below="@id/searchLayout"
         android:layout_above="@id/addButton"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp" />
 
+    <!-- "Too Much Work" Button -->
     <Button
         android:id="@+id/tooMuchWorkText"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Too much work!"
         android:background="@drawable/button_black_border"
         android:textColor="#000000"
         android:padding="10dp"
-        android:layout_above="@id/addButton"
-        android:layout_centerHorizontal="true"
         android:visibility="gone"
-        android:layout_marginBottom="16dp" />
+        android:layout_below="@id/searchLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
 
+    <!-- Add Task Button -->
     <Button
         android:id="@+id/addButton"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Task"
-        android:layout_above="@id/logoutButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
         android:background="@drawable/button_black_border"
-        android:textColor="#000000" />
-
-    <Button
-        android:id="@+id/logoutButton"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Logout"
+        android:textColor="#000000"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/button_black_border"
-        android:textColor="#000000" />
+        android:layout_marginEnd="16dp" />
 
 </RelativeLayout>
