@@ -1,6 +1,6 @@
-# Project 8
+# Project 9
 
-For our Midterm Project we have been tasked with creating To-Do List application where the user is able to enter a limit of seven daily tasks.
+For our Project 9 we have been tasked with creating To-Do List application where the user is able to enter a limit of seven daily tasks.
 
 ## Features
 
