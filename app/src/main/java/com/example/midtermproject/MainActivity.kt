@@ -43,11 +43,11 @@ class MainActivity : AppCompatActivity() {
 
         val currentUser = auth.currentUser
         if (currentUser == null) {
-
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, RegisterActivity::class.java))
             finish()
             return
         }
+
         recyclerView = findViewById(R.id.recyclerViewTasks)
         addButton = findViewById(R.id.addButton)
         logoutButton = findViewById(R.id.logoutButton)
